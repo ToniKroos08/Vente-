@@ -16,7 +16,7 @@ int main() {
         return 1;
     }
 
-    fwrite(&p, sizeof(Produit), 1, f); // écriture binaire d'une structure
+    fwrite(&p, sizeof(P), 1, f); // écriture binaire d'une structure
     fclose(f);
 
     return 0;
