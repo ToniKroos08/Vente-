@@ -1,1 +1,9 @@
-
+// structure vente
+typedef struct {
+    int id_vente;
+    int id_prod;
+    char dat_vente[11]; // format "JJ/MM/AAAA"
+    int qte_vendue;
+    float prix_unit;
+    float prix_total;
+} Vente;
