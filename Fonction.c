@@ -1,7 +1,7 @@
 include <stdio.h>
 
 int main() {
-    FILE *f = fopen("Hist_ventes.dat", "a"); // ouvrir pour écrire à la fin
+    FILE *f = fopen("Hist_Ventes.dat", "a"); // ouvrir pour écrire à la fin
     if (f == NULL) {
         printf("Erreur d'ouverture.\n");
         return 1;
