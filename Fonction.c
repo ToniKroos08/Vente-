@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
     FILE *f = fopen("Hist_Ventes.dat", "a"); // ouvrir pour écrire à la fin
