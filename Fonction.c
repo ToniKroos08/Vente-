@@ -1,14 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
+typedef struct {
+    int id;
+    char nom[30];
+    float prix;
+} Produit;
+
 int main() {
-    FILE *f = fopen("Hist_Ventes.dat", "a"); // ouvrir pour écrire à la fin
+    Produit p = {1, "Clavier", 29.99};
+
+    FILE *f = fopen("Hist_Ventes.dat", "ab"); // 'a' pour ajout, 'b' pour binaire
     if (f == NULL) {
-        printf("Erreur d'ouverture.\n");
+        printf("Erreur lors de l'ouverture du fichier.\n");
         return 1;
     }
 
-    fprintf(f, "Texte ajouté dans le fichier.\n"); // écriture
+    fwrite(&p, sizeof(Produit), 1, f); // écriture binaire d'une structure
     fclose(f);
 
     return 0;
