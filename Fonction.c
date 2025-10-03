@@ -10,7 +10,7 @@ typedef struct {
 int main() {
     Produit p = {1, "Clavier", 29.99};
 
-    FILE *f = fopen("Hist_Ventes.dat", "ab"); // 'a' pour ajout, 'b' pour binaire
+    FILE *f = fopen("Hist_Ventes.dat", "wb"); // 'w' pour écrire , 'b' pour binaire
     if (f == NULL) {
         printf("Erreur lors de l'ouverture du fichier.\n");
         return 1;
