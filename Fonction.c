@@ -30,7 +30,7 @@ int ins_vente(Vente v) {
 
     if (!produit_trouve) {
         printf("Erreur : Produit d'ID %d non trouvé dans le stock.\n", v.id_prod);
-        fclose(fp);
+        fclose(fp_prod);
         return 0;
     }
 
