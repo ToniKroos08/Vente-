@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h> // Pour la date
-int main{
-struct Vente v;
+int main(){
+Vente v;
+int choix;
 
 // Constantes pour les noms de fichiers
 #define HIST_VENTES_FILE "Hist_Ventes.dat"
