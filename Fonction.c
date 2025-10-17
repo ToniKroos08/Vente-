@@ -110,7 +110,7 @@ void generer_date_courante(char* date_str) {
                     printf(" Échec de la vente.\n");
                 }
                 break;
-case 0:
+            case 0:
                 printf("Fermeture du programme.\n");
                 break;
 
