@@ -37,7 +37,7 @@ int ins_vente(Vente v) {
     // 3. Vérifier la quantité disponible
     if (p.prod_qte < v.qte_vendue) {
         printf("Erreur : Stock insuffisant pour le produit %d (Stock: %d, Demandé: %d).\n", 
-               id_prod, p.prod_qte, v.qte_vendue);
+               p.id_prod, p.prod_qte, v.qte_vendue);
         fclose(fp_prod);
         return 0;
     }
@@ -53,7 +53,7 @@ int ins_vente(Vente v) {
     fclose(fp_prod);
 
     //5. Effectuer la vente
-    v.prix_unit = p.prix.unit;
+    v.prix_unit = p.prix_unit;
     v.prix_total = v.prix_unit * v.qte_vendue;
     generer_date_courante(v.date_vente);
 
@@ -74,7 +74,7 @@ int ins_vente(Vente v) {
     printf("Vente enregistrée avec succès (ID vente : %d).\n", v.id_vente);
     return 1;
 
-
+}
 
 void generer_date_courante(char* date_str) {
     time_t now = time(NULL);
