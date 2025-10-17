@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h> // Pour la date
+int main{
+struct Vente v;
 
 // Constantes pour les noms de fichiers
 #define HIST_VENTES_FILE "Hist_Ventes.dat"
@@ -83,6 +85,41 @@ void generer_date_courante(char* date_str) {
     strftime(date_str, 11, "%d/%m/%Y", t);
 }
 
+
+
+    do {
+        printf("\n=== MENU VENTE ===\n");
+        printf("1. Effectuer une vente\n");
+        printf("0. Quitter\n");
+        printf("Choix : ");
+        scanf("%d", &choix);
+
+        switch (choix) {
+            case 1:
+                // Saisie des infos de vente
+                printf("ID vente : ");
+                scanf("%d", &v.id_vente)
+
+                printf("Quantité vendue : ");
+                scanf("%d", &v.qte_vendue);
+
+                if (ins_vente(v)) {
+                    printf(" Vente effectuée avec succès.\n");
+                } else {
+                    printf(" Échec de la vente.\n");
+                }
+                break;
+case 0:
+                printf("Fermeture du programme.\n");
+                break;
+
+            default:
+                printf("Option invalide.\n");
+        }
+    } while (choix != 0);
+
+    return 0;
+}
 
 
 
